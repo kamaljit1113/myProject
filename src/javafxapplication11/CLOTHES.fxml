@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="572.0" prefWidth="725.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxapplication11.CLOTHESController">
+    <stylesheets>
+        <URL value="@clothes.css" />
+    </stylesheets>
+   <children>
+      <GridPane layoutX="60.0" layoutY="53.0" prefHeight="30.0" prefWidth="644.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="129.0" minWidth="10.0" prefWidth="129.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="159.0" minWidth="10.0" prefWidth="151.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="179.0" minWidth="10.0" prefWidth="145.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="196.0" minWidth="10.0" prefWidth="142.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="123.0" minWidth="10.0" prefWidth="73.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="164.0" text="MEN" />
+            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="159.0" text="WOMEN" GridPane.columnIndex="1" />
+            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="162.0" text="KIDS" GridPane.columnIndex="2" />
+            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="141.0" text="HOME" GridPane.columnIndex="3" />
+            <ImageView fitHeight="39.0" fitWidth="73.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4">
+               <image>
+                  <Image url="@cart.png" />
+               </image>
+            </ImageView>
+         </children>
+      </GridPane>
+      <Pane layoutX="60.0" layoutY="145.0" prefHeight="576.0" prefWidth="644.0">
+         <children>
+            <ImageView fitHeight="159.0" fitWidth="146.0" layoutX="21.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@men.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="159.0" fitWidth="119.0" layoutX="255.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@men2.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="159.0" fitWidth="129.0" layoutX="457.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@men3.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="178.0" fitWidth="171.0" layoutX="21.0" layoutY="308.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@baby.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="190.0" fitWidth="178.0" layoutX="203.0" layoutY="308.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@baby2.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="178.0" fitWidth="159.0" layoutX="446.0" layoutY="327.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@baby3.jpg" />
+               </image>
+            </ImageView>
+            <CheckBox id="ch_swatShirt" fx:id="ch_swatShirt" layoutX="22.0" layoutY="220.0" mnemonicParsing="false" onAction="#swatShirt" text="Add To Cart" />
+            <CheckBox id="ch_hoodie" fx:id="ch_hoodie" layoutX="233.0" layoutY="233.0" mnemonicParsing="false" onAction="#hoodie" text="Add To Cart" />
+            <CheckBox id="ch_sweater" fx:id="ch_sweater" layoutX="438.0" layoutY="246.0" mnemonicParsing="false" onAction="#sweater" text="Add To Cart" />
+            <CheckBox id="ch_jeans" fx:id="ch_jeans" layoutX="22.0" layoutY="512.0" mnemonicParsing="false" onAction="#jeans" text="Add To Cart" />
+            <CheckBox id="ch_pant" fx:id="ch_pant" layoutX="203.0" layoutY="512.0" mnemonicParsing="false" onAction="#Pants" text="Add To Cart" />
+            <CheckBox id="ch_goggles" fx:id="ch_goggles" layoutX="447.0" layoutY="512.0" mnemonicParsing="false" onAction="#Goggles" text="Add To Cart" />
+            <RadioButton id="s1" fx:id="s1" layoutX="20.0" layoutY="245.0" mnemonicParsing="false" onAction="#swatShirt" text="S">
+               <toggleGroup>
+                  <ToggleGroup fx:id="Item1" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton id="m1" fx:id="m1" layoutX="64.0" layoutY="245.0" mnemonicParsing="false" onAction="#swatShirt" text="M" toggleGroup="$Item1" />
+            <RadioButton id="l1" fx:id="l1" layoutX="112.0" layoutY="245.0" mnemonicParsing="false" onAction="#swatShirt" text="L" toggleGroup="$Item1" />
+            <RadioButton id="xl1" layoutX="147.0" layoutY="245.0" mnemonicParsing="false" onAction="#swatShirt" text="XL" toggleGroup="$Item1" fx:id="xl1" />
+            <RadioButton id="s2" fx:id="s2" layoutX="241.0" layoutY="263.0" mnemonicParsing="false" onAction="#hoodie" text="S">
+               <toggleGroup>
+                  <ToggleGroup fx:id="Item2" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton id="xl2" layoutX="338.0" layoutY="263.0" mnemonicParsing="false" onAction="#hoodie" text="XL" toggleGroup="$Item2" fx:id="xl2" />
+            <RadioButton id="l2" fx:id="l2" layoutX="308.0" layoutY="263.0" mnemonicParsing="false" onAction="#hoodie" text="L" toggleGroup="$Item2" />
+            <RadioButton id="m2" fx:id="m2" layoutX="276.0" layoutY="263.0" mnemonicParsing="false" onAction="#hoodie" prefHeight="17.0" prefWidth="32.0" text="M" toggleGroup="$Item2" />
+            <RadioButton id="s3" fx:id="s3" layoutX="443.0" layoutY="273.0" mnemonicParsing="false" onAction="#sweater" text="S">
+               <toggleGroup>
+                  <ToggleGroup fx:id="Item3" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton id="m3" fx:id="m3" layoutX="480.0" layoutY="273.0" mnemonicParsing="false" onAction="#sweater" text="M" toggleGroup="$Item3" />
+            <RadioButton id="l3" fx:id="l3" layoutX="526.0" layoutY="272.0" mnemonicParsing="false" onAction="#sweater" text="L" toggleGroup="$Item3" />
+            <RadioButton id="xl3" layoutX="559.0" layoutY="272.0" mnemonicParsing="false" onAction="#sweater" text="XL" toggleGroup="$Item3" fx:id="xl3" />
+            <Label layoutX="29.0" layoutY="189.0" prefHeight="17.0" prefWidth="129.0" text="Swat Shirt        $ 25.00" />
+            <Label layoutX="291.0" layoutY="211.0" text="\$ 75.00" />
+            <Label layoutX="498.0" layoutY="211.0" text="\$50.00" />
+            <RadioButton id="s4" fx:id="s4" layoutX="23.0" layoutY="537.0" mnemonicParsing="false" onAction="#jeans" text="S">
+               <toggleGroup>
+                  <ToggleGroup fx:id="Item4" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton id="m4" fx:id="m4" layoutX="64.0" layoutY="537.0" mnemonicParsing="false" onAction="#jeans" text="M" toggleGroup="$Item4" />
+            <RadioButton id="l4" fx:id="l4" layoutX="104.0" layoutY="537.0" mnemonicParsing="false" onAction="#jeans" text="L" toggleGroup="$Item4" />
+            <RadioButton id="xl4" layoutX="139.0" layoutY="537.0" mnemonicParsing="false" onAction="#jeans" text="XL" toggleGroup="$Item4" fx:id="xl4" />
+            <RadioButton id="s5" fx:id="s5" layoutX="218.0" layoutY="537.0" mnemonicParsing="false" onAction="#Pants" text="S">
+               <toggleGroup>
+                  <ToggleGroup fx:id="Item5" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton id="m5" fx:id="m5" layoutX="260.0" layoutY="537.0" mnemonicParsing="false" onAction="#Pants" text="M" toggleGroup="$Item5" />
+            <RadioButton id="l5" fx:id="l5" layoutX="301.0" layoutY="537.0" mnemonicParsing="false" onAction="#Pants" text="L" toggleGroup="$Item5" />
+            <RadioButton id="xl5" layoutX="338.0" layoutY="537.0" mnemonicParsing="false" onAction="#Pants" text="XL" toggleGroup="$Item5" fx:id="xl5" />
+            <RadioButton id="s6" fx:id="s6" layoutX="456.0" layoutY="537.0" mnemonicParsing="false" onAction="#Goggles" text="S">
+               <toggleGroup>
+                  <ToggleGroup fx:id="Item6" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton id="m6" fx:id="m6" layoutX="496.0" layoutY="537.0" mnemonicParsing="false" onAction="#Goggles" text="M" toggleGroup="$Item6" />
+            <RadioButton id="l6" fx:id="l6" layoutX="539.0" layoutY="537.0" mnemonicParsing="false" onAction="#Goggles" text="L" toggleGroup="$Item6" />
+            <RadioButton id="xl6" layoutX="579.0" layoutY="537.0" mnemonicParsing="false" onAction="#Goggles" text="XL" toggleGroup="$Item6" fx:id="xl6" />
+            <ComboBox id="c1" fx:id="c1" layoutX="125.0" layoutY="216.0" onAction="#swatShirt" prefHeight="25.0" prefWidth="61.0" promptText="Qty" />
+            <ComboBox id="c2" fx:id="c2" layoutX="329.0" layoutY="229.0" prefHeight="25.0" prefWidth="61.0" promptText="Qty" />
+            <ComboBox id="c3" fx:id="c3" layoutX="538.0" layoutY="238.0" prefHeight="25.0" prefWidth="73.0" promptText="Qty" />
+            <ComboBox id="c4" fx:id="c4" layoutX="113.0" layoutY="508.0" prefHeight="25.0" prefWidth="61.0" promptText="Qty" />
+            <ComboBox id="c5" fx:id="c5" layoutX="313.0" layoutY="508.0" prefHeight="25.0" prefWidth="61.0" promptText="Qty" />
+            <ComboBox id="c6" fx:id="c6" layoutX="543.0" layoutY="508.0" prefHeight="25.0" prefWidth="61.0" promptText="Qty" />
+         </children>
+      </Pane>
+      <Button id="b1" fx:id="b1" layoutX="209.0" layoutY="96.0" mnemonicParsing="false" onAction="#btn_b1" text="Check order" />
+   </children>
+</AnchorPane>
